@@ -26,3 +26,5 @@ hs_err_pid*
 # Intellij stuff
 .idea/*
 *.iml
+*.xml
+*.html
