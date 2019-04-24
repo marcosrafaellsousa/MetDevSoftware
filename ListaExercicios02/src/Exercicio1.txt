@@ -1,0 +1,25 @@
+﻿1-a)	Uma classe é uma especificação que organiza dados e procedimentos no código-fonte de um programa.
+
+b)	Um objeto é uma instância de uma classe, em tempo de execução o programa aloca espaço na memória e atribui valores a eles.
+
+c)	Um atributo é um dado que pertence a uma classe, ele define a estrutura da classe.
+
+d)	Método é um procedimento, instruções para realizar operações no estado dos objetos.
+
+e)	Assinatura de um método é uma identidade única que define um método, ela é composta pelo nome do método mais seus parâmetros.
+
+f)	Métodos possuem um retorno, porém para métodos que não retornam nenhum dado, é usado a palavra “void”.
+
+g)	Construtor é um procedimento que instancia um objeto de uma classe, é chamado pela palavra “new”.
+
+h)	O método main é o primeiro método que será chamado quando o programa for executado, se o programa não possuir nenhum método main ele não pode ser executado.
+
+i)	A sobrecarga de métodos significa ter métodos com o mesmo nome porém com parâmetros diferentes, conforme a resposta da questão 1-e, assinatura é composta de nome mais parâmetros, por isso é possível que dois ou mais métodos tenham o mesmo nome, neste caso dizemos que este método está sobrecarregado.
+
+j)	Atributos e métodos estáticos são comuns para todos os objetos de uma mesma classe, eles não sofrem influência de nenhuma instância da classe.
+
+k)	Atributos de classe são compartilhados por todos os objetos de uma classe, enquanto atributos de instância variam para cada objeto e determina seu estado.
+
+l)	O escopo de uma variável é o contexto em que ela foi declarada, no momento que esta operação deixar de existir a variável também deixa, por exemplo uma variável declarado dentro de uma estrutura FOR deixa de existir quando uma repetição acaba.
+
+m)	Modificadores de acesso servem para definir contextos em que os atributos ou métodos podem ser chamados. 
