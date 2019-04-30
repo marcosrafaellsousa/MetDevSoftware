@@ -8,6 +8,15 @@ public class Item {
     private String tempoDeDuracao;
     private ArrayList<String> comentarios = new ArrayList<>();
 
+    public Item(String titulo, int ano, String tempoDeDuracao) {
+        this.titulo = titulo;
+        this.ano = ano;
+        this.tempoDeDuracao = tempoDeDuracao;
+    }
+
+    public Item() {
+    }
+
     public String getTitulo() {
         return titulo;
     }
@@ -38,6 +47,10 @@ public class Item {
 
     public void setComentarios(ArrayList<String> comentarios) {
         this.comentarios = comentarios;
+    }
+
+    public void addComentario (String comentario) {
+        this.comentarios.add(comentario);
     }
 
     @Override

@@ -4,6 +4,15 @@ public class CD extends Item{
     private String artista;
     private int quantidadeDeFaixas;
 
+    public CD(String titulo, int ano, String tempoDeDuracao, String artista, int quantidadeDeFaixas) {
+        super(titulo, ano, tempoDeDuracao);
+        this.artista = artista;
+        this.quantidadeDeFaixas = quantidadeDeFaixas;
+    }
+
+    public CD() {
+    }
+
     public String getArtista() {
         return artista;
     }
@@ -22,10 +31,10 @@ public class CD extends Item{
 
     @Override
     public String toString() {
-        return "CD: " +
+        return String.format("CD: " +
                 super.toString() +
                 "artista: '" + artista + '\'' +
                 ", quantidadeDeFaixas: " + quantidadeDeFaixas +
-                "%n";
+                "%n");
     }
 }
