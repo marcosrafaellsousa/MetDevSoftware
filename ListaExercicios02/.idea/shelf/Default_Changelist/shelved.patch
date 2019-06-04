@@ -1,0 +1,17 @@
+Index: src/Exercicio3/Jogo.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package Exercicio3;\r\n\r\npublic class Jogo extends Item {\r\n\r\n    private int numeroDeJogadores;\r\n    private String plataforma;\r\n\r\n    public int getNumeroDeJogadores() {\r\n        return numeroDeJogadores;\r\n    }\r\n\r\n    public void setNumeroDeJogadores(int numeroDeJogadores) {\r\n        this.numeroDeJogadores = numeroDeJogadores;\r\n    }\r\n\r\n    public String getPlataforma() {\r\n        return plataforma;\r\n    }\r\n\r\n    public void setPlataforma(String plataforma) {\r\n        this.plataforma = plataforma;\r\n    }\r\n\r\n    @Override\r\n    public String toString() {\r\n        return \"Jogo: \" +\r\n                super.toString() +\r\n                \"numeroDeJogadores: \" + numeroDeJogadores +\r\n                \", plataforma: '\" + plataforma + '\\'' +\r\n                \"%n\";\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/Exercicio3/Jogo.java	(revision 56b3f152ebe14fd0eb8694204c19f1617f01c014)
++++ src/Exercicio3/Jogo.java	(date 1556649730876)
+@@ -26,7 +26,6 @@
+         return "Jogo: " +
+                 super.toString() +
+                 "numeroDeJogadores: " + numeroDeJogadores +
+-                ", plataforma: '" + plataforma + '\'' +
+                 "%n";
+     }
+ }
