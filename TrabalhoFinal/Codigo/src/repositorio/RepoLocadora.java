@@ -8,7 +8,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public final class RepoLocadora {
+public final class RepoLocadora implements Repo<Locadora>{
 
     private static RepoLocadora instancia;
 

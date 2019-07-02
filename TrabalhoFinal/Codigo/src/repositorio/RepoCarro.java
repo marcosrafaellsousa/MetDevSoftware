@@ -9,7 +9,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RepoCarro {
+public class RepoCarro implements Repo<Carro> {
 
     private static RepoCarro instancia;
 
