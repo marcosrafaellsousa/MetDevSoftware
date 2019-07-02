@@ -1,6 +1,8 @@
 package modelo;
 
-public abstract class ObjetoPadrao {
+import java.io.Serializable;
+
+public abstract class ObjetoPadrao implements Serializable {
 
     private final long id;
     private static long ultimoId = 0;
