@@ -21,16 +21,19 @@ public class Programa {
 //
 //        locadora.getCarrosList().add(carro);
 //        locadora1.getCarrosList().add(carro1);
-//
+
         RepoCarro repoCarro = RepoCarro.obtemInstancia();
         repoCarro.carregarDoArquivo();
-//        repoCarro.incluir(carro);
-//        repoCarro.incluir(carro1);
-//
+
+
         RepoLocadora repoLocadora = RepoLocadora.obtemInstancia();
         repoLocadora.carregarDoArquivo();
+
+
 //        repoLocadora.incluir(locadora);
 //        repoLocadora.incluir(locadora1);
+//        repoCarro.incluir(carro);
+//        repoCarro.incluir(carro1);
 
         JanelaPrincipal.obtemInstancia().menuPrincipal();
     }

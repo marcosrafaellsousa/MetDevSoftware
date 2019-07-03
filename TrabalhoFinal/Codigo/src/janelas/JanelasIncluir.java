@@ -1,5 +1,6 @@
 package janelas;
 
+import janelas.Excecoes.NomeInvalido;
 import modelo.Carro;
 import modelo.Categoria;
 import modelo.Locadora;
@@ -67,6 +68,7 @@ public class JanelasIncluir {
                 locadora.getCarrosList().add(carro);
                 repoLocadora.salvarNoArquivo();
                 RepoCarro.obtemInstancia().incluir(carro);
+                JOptionPane.showMessageDialog(null, "O carro foi registrado!");
                 JanelaPrincipal.obtemInstancia().menuPrincipal();
             }catch (Exception e) {
                 JOptionPane.showMessageDialog(null, "Não foi possivel criar o carro, campos inválidos!");
@@ -106,6 +108,9 @@ public class JanelasIncluir {
                 "Registrar uma nova Locadora", JOptionPane.OK_CANCEL_OPTION);
         if (result == JOptionPane.OK_OPTION) {
             try {
+                if (campoNome.getText().contains(" - Id: ")) {
+                    throw new NomeInvalido();
+                }
                 Locadora locadora = new Locadora();
                 locadora.setNome(campoNome.getText());
                 locadora.setCnpj(campoCnpj.getText());
@@ -117,10 +122,15 @@ public class JanelasIncluir {
                 localizacao.setEstado(campoEstado.getText());
                 locadora.setLocalizacao(localizacao);
                 RepoLocadora.obtemInstancia().incluir(locadora);
+                JOptionPane.showMessageDialog(null, "A locadora foi registrada!");
                 JanelaPrincipal.obtemInstancia().menuPrincipal();
-            } catch (Exception e) {
+            } catch (NomeInvalido e) {
+                JOptionPane.showMessageDialog(null, "O nome nao pode conter o trecho \" - Id: \"");
+                incluirLocadora();
+            }
+            catch (Exception e) {
                 JOptionPane.showMessageDialog(null, "Não foi possivel cadastrar a nova locadora, campos inválidos!");
-                JanelaPrincipal.obtemInstancia().menuPrincipal();
+                incluirLocadora();
             }
         } else {
             JanelaPrincipal.obtemInstancia().menuPrincipal();
